@@ -15,7 +15,10 @@ var dataObject = {
 $(function(){
     $('#template').tmpl($.extend({count:1}, dataObject)).appendTo('body');
     $('#template2').remove().tmpl($.extend({count:2}, dataObject)).appendTo('body');
-    window.console && console.log(($('#a-1').attr('href') == dataObject.url) && ($('#a-2').attr('href') == dataObject.url));
+    if(window.console){
+        console.log($('#a-1').attr('href') == dataObject.url);
+        console.log($('#a-2').attr('href') == dataObject.url);
+    }
 })
 
 </script>
